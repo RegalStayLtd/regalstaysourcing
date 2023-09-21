@@ -3578,7 +3578,47 @@ input[type="color"] {
 .search__blog-meta-author {
   margin-bottom: 10px;
 }
+.review-side-border {
+  position: relative;
+}
 
+.review-side-border::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #d2d2d4;
+  width: 2px;
+  height: 80px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  (max-width: 767px),
+  only screen and (min-width: 576px) and (max-width: 767px) {
+  .review-side-border::after {
+    display: none;
+  }
+}
+
+.review-side-border::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #d2d2d4;
+  width: 2px;
+  height: 80px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px),
+  (max-width: 767px),
+  only screen and (min-width: 576px) and (max-width: 767px) {
+  .review-side-border::before {
+    display: none;
+  }
+}
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .search__blog-meta-author {
     margin-right: 20px;
